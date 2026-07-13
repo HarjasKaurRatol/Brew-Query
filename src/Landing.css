@@ -65,6 +65,7 @@
    sizing, and the text label rendered on top of it. */
 .landing-svg-button {
   aspect-ratio: 193 / 68;
+  background-image: url('/images/landing-button.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

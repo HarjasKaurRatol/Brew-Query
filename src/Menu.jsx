@@ -1,4 +1,3 @@
-import menuBg from './assets/images/page2.png';
 import './Menu.css';
 
 const NAV_ITEMS = [
@@ -15,7 +14,7 @@ export default function Menu({ onSelectLevels }) {
 
   return (
     <div className="menu">
-      <img className="menu-bg" src={menuBg} alt="" />
+      <img className="menu-bg" src="/images/cafe-interior.png" alt="" />
       <div className="menu-overlay" />
 
       <div className="menu-nav">

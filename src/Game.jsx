@@ -78,7 +78,7 @@ export default function Game({ challengeId, onComplete, onBack, onSelectChalleng
       <div className="game">
         <button className="scene-back btn-secondary" onClick={onBack}>&larr; Levels</button>
         <div className="game-scene">
-          <img className="game-scene-img" src="/query-desk.png" alt="" />
+          <img className="game-scene-img" src="/images/query-desk.png" alt="" />
           <div className="game-status-card">
             <p>{initError ? `Failed to load SQL engine: ${initError}` : 'Loading SQL engine…'}</p>
           </div>
@@ -92,7 +92,7 @@ export default function Game({ challengeId, onComplete, onBack, onSelectChalleng
       <button className="scene-back btn-secondary" onClick={onBack}>&larr; Levels</button>
 
       <div className="game-scene">
-        <img className="game-scene-img" src="/query-desk.png" alt="" />
+        <img className="game-scene-img" src="/images/query-desk.png" alt="" />
 
         <button
           className="scene-db-toggle"

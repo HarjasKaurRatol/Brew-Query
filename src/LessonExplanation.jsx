@@ -1,4 +1,3 @@
-import lessonBg from './assets/images/Lesson Explanation.png';
 import './LessonExplanation.css';
 
 export default function LessonExplanation({ challenge, onBack }) {
@@ -7,7 +6,7 @@ export default function LessonExplanation({ challenge, onBack }) {
       <button className="lesson-back btn-secondary" onClick={onBack}>&larr; Back to Challenge</button>
 
       <div className="lesson-scene">
-        <img className="lesson-bg" src={lessonBg} alt="" />
+        <img className="lesson-bg" src="/images/lesson-explanation.png" alt="" />
 
         <div className="lesson-board">
           <h2 className="lesson-board-title">{challenge.title}</h2>

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import landingButtonSvg from './assets/images/landing-button.svg';
 import './Landing.css';
 
 export default function Landing({ onNewGame }) {
@@ -9,7 +8,7 @@ export default function Landing({ onNewGame }) {
     <div className="landing">
       <video
         className="landing-video"
-        src="/landing-bg.mp4"
+        src="/images/landing-bg.mp4"
         autoPlay
         muted
         loop
@@ -21,16 +20,11 @@ export default function Landing({ onNewGame }) {
         <h1 className="landing-title">Brew &amp; Query</h1>
         <p className="landing-subtitle">Learn SQL, one order at a time.</p>
 
-        <button
-          className="landing-button landing-svg-button"
-          style={{ backgroundImage: `url("${landingButtonSvg}")` }}
-          onClick={onNewGame}
-        >
+        <button className="landing-button landing-svg-button" onClick={onNewGame}>
           New Game
         </button>
         <button
           className="landing-button landing-svg-button"
-          style={{ backgroundImage: `url("${landingButtonSvg}")` }}
           onClick={() => setShowSettings(true)}
         >
           Settings

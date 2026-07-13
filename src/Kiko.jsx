@@ -25,7 +25,7 @@ export default function Kiko({ onFinish }) {
   return (
     <div className="kiko-scene">
       <div className="kiko-frame">
-        <img className="kiko-bg" src="/kiko-dialogue.png" alt="Kiko, the café barista" />
+        <img className="kiko-bg" src="/images/kiko-dialogue.png" alt="Kiko, the café barista" />
 
         <div className="kiko-controls">
           <button className="kiko-skip btn-secondary" onClick={onFinish}>
