@@ -1,0 +1,110 @@
+.landing {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.landing-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 20, 30, 0.55) 0%,
+    rgba(40, 20, 30, 0.25) 35%,
+    rgba(40, 20, 30, 0) 65%
+  );
+  z-index: 1;
+}
+
+.landing-panel {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 48px;
+  max-width: 320px;
+}
+
+.landing-title {
+  font-family: 'Fredoka', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: #fff6ea;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 0 8px 0;
+}
+
+.landing-subtitle {
+  font-size: 0.95rem;
+  color: #ffe9d6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  margin: 0 0 16px 0;
+}
+
+.landing-button {
+  width: 100%;
+  font-size: 1.05rem;
+}
+
+/* SVG-art button: the shape, border, and dashed inset line all live in the
+   SVG itself (landing-button.svg), so this class only handles layout,
+   sizing, and the text label rendered on top of it. */
+.landing-svg-button {
+  aspect-ratio: 193 / 68;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  border: none;
+  cursor: pointer;
+  font-family: 'Fredoka', system-ui, sans-serif;
+  font-weight: 700;
+  color: #603a2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.landing-svg-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.settings-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.settings-modal {
+  background: #fff6ea;
+  color: #5a3324;
+  border-radius: 16px;
+  padding: 28px 32px;
+  max-width: 320px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.settings-modal h3 {
+  margin-top: 0;
+}
+
+.settings-modal .btn-primary {
+  margin-top: 16px;
+}

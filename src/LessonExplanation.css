@@ -1,0 +1,76 @@
+.lesson-explanation {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #241509;
+}
+
+/* Lives OUTSIDE .lesson-scene on purpose: that scene is deliberately
+   oversized and cropped to fill the screen (see comment below), so a
+   percentage position resolved against it can land outside the visible
+   viewport. Pinning to the viewport instead keeps it fully visible and
+   clickable at any window size. */
+.lesson-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  font-size: 0.9rem;
+}
+
+/* Same cover-fill sizing as .game-scene / .level-intro-scene — Lesson
+   Explanation.png is 1672x941 (ratio 1.7768), same as query-desk.png, so
+   the same formula keeps the transition between screens seamless. */
+.lesson-scene {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: max(100vw, 177.68vh);
+  height: max(100vh, 56.28vw);
+  container-type: inline-size;
+  overflow: hidden;
+}
+
+.lesson-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* The blackboard's writable area, measured from the artwork: roughly
+   x 350-1352, y 160-608 out of 1672x941. The "TODAY'S LESSON" neon sign
+   art sits at roughly x 368-541, y 189-269, so the content starts below
+   it (top: 30%) rather than overlapping. */
+.lesson-board {
+  position: absolute;
+  left: 22%;
+  right: 20%;
+  top: 30%;
+  bottom: 34%;
+  box-sizing: border-box;
+  padding: 1cqw 2cqw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  color: #f2ead9;
+  font-family: 'Fredoka', system-ui, sans-serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.lesson-board-title {
+  margin: 0 0 0.1em;
+  font-size: clamp(0.75rem, 1.7cqw, 1.3rem);
+  font-weight: 600;
+  color: #ffe9c7;
+  text-align: center;
+}
+
+.lesson-board-text {
+  margin: 0;
+  font-size: clamp(0.55rem, 1cqw, 0.9rem);
+  line-height: 1.45;
+}
