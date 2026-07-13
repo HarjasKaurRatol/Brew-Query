@@ -8,7 +8,7 @@ export default function Landing({ onNewGame }) {
     <div className="landing">
       <video
         className="landing-video"
-        src="/images/landing-bg.mp4"
+        src={`${import.meta.env.BASE_URL}images/landing-bg.mp4`}
         autoPlay
         muted
         loop

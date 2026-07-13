@@ -3,8 +3,8 @@ import { renderBold } from './renderBold';
 import './LevelIntro.css';
 
 const BOX_ART = {
-  kiko: '/images/kiko-dialogue-box.png',
-  mini: '/images/mini-dialogue-box.png',
+  kiko: `${import.meta.env.BASE_URL}images/kiko-dialogue-box.png`,
+  mini: `${import.meta.env.BASE_URL}images/mini-dialogue-box.png`,
 };
 
 export default function LevelIntro({ lines, onFinish, onBack }) {
@@ -47,7 +47,7 @@ export default function LevelIntro({ lines, onFinish, onBack }) {
       </div>
 
       <div className="level-intro-scene">
-        <img className="level-intro-bg" src="/images/query-desk.png" alt="" />
+        <img className="level-intro-bg" src={`${import.meta.env.BASE_URL}images/query-desk.png`} alt="" />
 
         <div className={`level-intro-box-wrap level-intro-box-wrap--${current.speaker}`}>
           <img className="level-intro-box-img" src={BOX_ART[current.speaker]} alt={current.speaker} />

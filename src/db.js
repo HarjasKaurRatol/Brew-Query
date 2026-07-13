@@ -9,7 +9,7 @@ let sqlModule = null;
 async function loadSqlModule() {
   if (sqlModule) return sqlModule;
   sqlModule = await initSqlJs({
-    locateFile: (file) => `/${file}`, // finds /sql-wasm.wasm in public/
+    locateFile: (file) => `${import.meta.env.BASE_URL}${file}`, // finds sql-wasm.wasm in public/
   });
   return sqlModule;
 }

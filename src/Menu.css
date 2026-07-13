@@ -99,26 +99,29 @@
   opacity: 0.85;
 }
 
+/* CSS can't read import.meta.env.BASE_URL, so these are hardcoded to match
+   the `base` in vite.config.js — update both together if the repo is ever
+   renamed or moved off /Brew-Query/. */
 .menu-nav-button--levels {
   --fill: #fbada7;
   --accent: #dd8b7d;
-  --icon-url: url('/images/nav-levels.svg');
+  --icon-url: url('/Brew-Query/images/nav-levels.svg');
 }
 
 .menu-nav-button--shop {
   --fill: #cae9f2;
   --accent: #7cc5db;
-  --icon-url: url('/images/nav-shop.svg');
+  --icon-url: url('/Brew-Query/images/nav-shop.svg');
 }
 
 .menu-nav-button--leaderboard {
   --fill: #fbbf72;
   --accent: #ff9a18;
-  --icon-url: url('/images/nav-leaderboard.svg');
+  --icon-url: url('/Brew-Query/images/nav-leaderboard.svg');
 }
 
 .menu-nav-button--profile {
   --fill: #cfb5de;
   --accent: #9a6bb5;
-  --icon-url: url('/images/nav-profile.svg');
+  --icon-url: url('/Brew-Query/images/nav-profile.svg');
 }

@@ -14,7 +14,7 @@ export default function Menu({ onSelectLevels }) {
 
   return (
     <div className="menu">
-      <img className="menu-bg" src="/images/cafe-interior.png" alt="" />
+      <img className="menu-bg" src={`${import.meta.env.BASE_URL}images/cafe-interior.png`} alt="" />
       <div className="menu-overlay" />
 
       <div className="menu-nav">

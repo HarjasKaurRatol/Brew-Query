@@ -4,7 +4,7 @@ import './Levels.css';
 export default function Levels({ completedIds, onSelectChallenge, onBack }) {
   return (
     <div className="levels">
-      <img className="levels-bg" src="/images/cafe-interior.png" alt="" />
+      <img className="levels-bg" src={`${import.meta.env.BASE_URL}images/cafe-interior.png`} alt="" />
       <div className="levels-overlay" />
 
       <div className="levels-panel">
