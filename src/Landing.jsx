@@ -6,13 +6,10 @@ export default function Landing({ onNewGame }) {
 
   return (
     <div className="landing">
-      <video
-        className="landing-video"
-        src={`${import.meta.env.BASE_URL}images/landing-bg.mp4`}
-        autoPlay
-        muted
-        loop
-        playsInline
+      <img
+        className="landing-bg"
+        src={`${import.meta.env.BASE_URL}images/cafe-interior.png`}
+        alt=""
       />
       <div className="landing-overlay" />
 
