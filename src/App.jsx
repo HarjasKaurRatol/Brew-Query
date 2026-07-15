@@ -3,6 +3,7 @@ import Landing from './Landing';
 import Kiko from './Kiko';
 import Menu from './Menu';
 import Levels from './Levels';
+import Profile from './Profile';
 import Game from './Game';
 import LevelIntro from './LevelIntro';
 import LessonExplanation from './LessonExplanation';
@@ -66,8 +67,17 @@ export default function App() {
     );
   }
 
+  if (view === 'profile') {
+    return <Profile completedIds={completedIds} onBack={() => setView('menu')} />;
+  }
+
   if (view === 'menu') {
-    return <Menu onSelectLevels={() => setView('levels')} />;
+    return (
+      <Menu
+        onSelectLevels={() => setView('levels')}
+        onSelectProfile={() => setView('profile')}
+      />
+    );
   }
 
   if (view === 'intro') {

@@ -7,9 +7,10 @@ const NAV_ITEMS = [
   { key: 'profile', label: 'Profile', sublabel: 'Your Stats' },
 ];
 
-export default function Menu({ onSelectLevels }) {
+export default function Menu({ onSelectLevels, onSelectProfile }) {
   function handleClick(key) {
     if (key === 'levels') onSelectLevels();
+    if (key === 'profile') onSelectProfile();
   }
 
   return (
